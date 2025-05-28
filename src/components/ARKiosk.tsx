@@ -96,6 +96,19 @@ const ARKiosk = () => {
           )}
         </div>
 
+        {/* Hero Character Figure - Large */}
+        <div className="text-center py-8">
+          <img 
+            src="/lovable-uploads/b110fda6-f471-4a32-8038-a28c9b61a674.png" 
+            alt="McDonald's Web3 Hero" 
+            className="w-64 h-80 mx-auto object-contain"
+            style={{
+              filter: 'drop-shadow(4px 8px 12px rgba(0, 0, 0, 0.3))'
+            }}
+          />
+          <p className="text-sm text-gray-600 mt-4">Your Web3 McDonald's Hero Guide</p>
+        </div>
+
         {/* Experience Selection */}
         <div>
           <h4 className="font-semibold mb-3">Choose Your AR Experience</h4>
