@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Camera, QrCode, Eye, RotateCcw, Maximize, Share2 } from "lucide-react";
+import { Camera, QrCode, Eye, RotateCcw, Maximize, Share2, Coins } from "lucide-react";
 
 const ARKiosk = () => {
   const [activeExperience, setActiveExperience] = useState('bigmac');
@@ -96,17 +96,26 @@ const ARKiosk = () => {
           )}
         </div>
 
-        {/* Hero Character Figure - Large */}
-        <div className="text-center py-8">
+        {/* Hero Character Figure - Extra Large */}
+        <div className="text-center py-12 bg-gradient-to-br from-yellow-50 to-orange-100 rounded-xl">
           <img 
             src="/lovable-uploads/b110fda6-f471-4a32-8038-a28c9b61a674.png" 
             alt="McDonald's Web3 Hero" 
-            className="w-64 h-80 mx-auto object-contain"
+            className="w-80 h-96 mx-auto object-contain mb-6"
             style={{
-              filter: 'drop-shadow(4px 8px 12px rgba(0, 0, 0, 0.3))'
+              filter: 'drop-shadow(6px 12px 20px rgba(0, 0, 0, 0.4))'
             }}
           />
-          <p className="text-sm text-gray-600 mt-4">Your Web3 McDonald's Hero Guide</p>
+          <div className="space-y-3">
+            <h3 className="text-2xl font-bold text-gray-800">Your Web3 McDonald's Hero Guide</h3>
+            <div className="flex items-center justify-center gap-3">
+              <Badge className="bg-gradient-to-r from-yellow-500 to-orange-600 text-white text-lg px-4 py-2">
+                <Coins className="w-5 h-5 mr-2" />
+                Powered by $SUINION
+              </Badge>
+            </div>
+            <p className="text-gray-600 text-lg">Ready to guide you through the AR experience</p>
+          </div>
         </div>
 
         {/* Experience Selection */}
