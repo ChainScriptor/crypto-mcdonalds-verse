@@ -70,17 +70,40 @@ const HeroCharacter = ({ station }: HeroCharacterProps) => {
       <CardContent className="p-6">
         {/* Hero Character Visualization */}
         <div className="flex items-center space-x-4 mb-4">
-          <div className={`w-16 h-16 rounded-full bg-gradient-to-r ${stationData.gradient} flex items-center justify-center text-white shadow-lg`}>
-            <Icon className="w-8 h-8" />
+          {/* Custom Hero Character Figure */}
+          <div className="relative">
+            <div className={`w-20 h-20 rounded-full bg-gradient-to-r ${stationData.gradient} flex items-center justify-center text-white shadow-lg`}>
+              <Icon className="w-8 h-8" />
+            </div>
+            {/* Hero Character Body */}
+            <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2">
+              <div className="w-16 h-20 bg-gradient-to-b from-blue-400 to-blue-600 rounded-t-full relative">
+                {/* McDonald's Uniform Details */}
+                <div className="absolute top-2 left-1/2 transform -translate-x-1/2 w-3 h-3 bg-yellow-400 rounded-full"></div>
+                <div className="absolute top-6 left-1/2 transform -translate-x-1/2 w-8 h-1 bg-black rounded"></div>
+                <div className="absolute bottom-0 left-0 w-full h-8 bg-black rounded-b-lg"></div>
+                {/* Arms */}
+                <div className="absolute top-4 -left-2 w-4 h-8 bg-blue-500 rounded-full"></div>
+                <div className="absolute top-4 -right-2 w-4 h-8 bg-blue-500 rounded-full"></div>
+                {/* McDonald's Hat */}
+                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 w-12 h-6 bg-black rounded-t-full border-b-2 border-yellow-400"></div>
+                <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 text-yellow-400 text-xs font-bold">M</div>
+              </div>
+              {/* Legs */}
+              <div className="absolute top-12 left-1/2 transform -translate-x-1/2 flex gap-1">
+                <div className="w-3 h-8 bg-black rounded-b-lg"></div>
+                <div className="w-3 h-8 bg-black rounded-b-lg"></div>
+              </div>
+            </div>
           </div>
-          <div className="flex-1">
+          <div className="flex-1 mt-8">
             <h3 className="text-xl font-bold text-gray-800">{stationData.title}</h3>
             <p className="text-gray-600">{stationData.description}</p>
           </div>
         </div>
 
         {/* McDonald's Uniform Details */}
-        <div className="bg-red-600 text-white p-4 rounded-lg mb-4">
+        <div className="bg-red-600 text-white p-4 rounded-lg mb-4 mt-8">
           <div className="flex items-center justify-between">
             <div>
               <div className="text-2xl font-black">McDonald's</div>
